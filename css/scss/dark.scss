@@ -1,8 +1,8 @@
 body.dark {
-    background: #000;
+    background: $dark-theme-color;
     color: #888;
     header, .btn-default:before, #preloader {
-        background: #000;
+        background: $dark-theme-color;
     }
     header, section, .fact-item, .price-item, .client-item, .form-control {
         border-color: #222;
@@ -12,7 +12,7 @@ body.dark {
     }
     a {
         &:hover {
-            color: $colorpurple;
+            color: $main-color;
         }
     }
     .mouse {
@@ -25,7 +25,7 @@ body.dark {
         background: #222;
     }
     .slick-dots li.slick-active button:before {
-        background: $colorpurple;
+        background: $main-color;
     }
     .slick-dots li button:before {
         background: rgba(255, 255, 255, 0.8);
@@ -39,7 +39,7 @@ body.dark {
     #return-to-top {
         background: rgba(255, 255, 255, 0.2);
         &:hover {
-            background: $colorpurple;
+            background: $main-color;
         }
     }
 }

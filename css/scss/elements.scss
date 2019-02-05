@@ -1,6 +1,3 @@
-/*=================================================================*/
-/*                     BOOTSTRAP ELEMENTS
-/*=================================================================*/
 .breadcrumb {
     font-size: 14px;
     padding: 0;
@@ -33,7 +30,7 @@
     line-height: 5px;
     color: #fff;
     text-align: center;
-    background-color: $colorpurple;
+    background-color: $main-color;
     -webkit-box-shadow: none;
     box-shadow: none;
     -webkit-transition: width .6s ease;
@@ -60,7 +57,7 @@
 }
 
 .form-control:focus {
-    border-color: $colorpurple;
+    border-color: $main-color;
     outline: 0;
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -172,7 +169,7 @@
     width: 9px;
     height: 9px;
     left: 0;
-    background-color: $colorpurple;
+    background-color: $main-color;
     top: 7px;
     z-index: 1;
 }
@@ -233,7 +230,7 @@
 }
 
 #return-to-top:hover {
-    background: $colorpurple;
+    background: $main-color;
 }
 
 .videoWrapper {

@@ -1,6 +1,3 @@
-/*=================================================================*/
-/*                      BASE                              
-/*=================================================================*/
 * {
   margin:0;
   padding:0;
@@ -68,7 +65,7 @@ a {
     outline: 0;
     @include transition(.3s);
     &:hover {
-        color: $colorpurple;
+        color: $main-color;
         text-decoration: none;
     }
     &:focus {
@@ -112,7 +109,7 @@ ul.styled {
     li {
         &:before {
             content: '';
-            background: $colorpurple;
+            background: $main-color;
             display: inline-block;
             height: 5px;
             margin-right: 20px;
@@ -150,7 +147,7 @@ ul.styled {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: $colorpurple;
+    background-color: $main-color;
     -webkit-animation: mugi-foldCubeAngle 2.4s infinite linear both;
           animation: mugi-foldCubeAngle 2.4s infinite linear both;
     -webkit-transform-origin: 100% 100%;
