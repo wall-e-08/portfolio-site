@@ -122,7 +122,7 @@ ul.styled {
 /*=================================================================*/
 /*                      PRELOADER                              
 /*=================================================================*/
-.mugi-folding-cube {
+.wall-e-folding-cube {
     margin: auto;
     width: 40px;
     height: 40px;
@@ -131,7 +131,7 @@ ul.styled {
           transform: rotateZ(45deg);
 }
 
-.mugi-folding-cube .mugi-cube {
+.wall-e-folding-cube .wall-e-cube {
     float: left;
     width: 50%;
     height: 50%;
@@ -140,7 +140,7 @@ ul.styled {
       -ms-transform: scale(1.1);
           transform: scale(1.1); 
 }
-.mugi-folding-cube .mugi-cube:before {
+.wall-e-folding-cube .wall-e-cube:before {
     content: '';
     position: absolute;
     top: 0;
@@ -148,37 +148,37 @@ ul.styled {
     width: 100%;
     height: 100%;
     background-color: $main-color;
-    -webkit-animation: mugi-foldCubeAngle 2.4s infinite linear both;
-          animation: mugi-foldCubeAngle 2.4s infinite linear both;
+    -webkit-animation: wall-e-foldCubeAngle 2.4s infinite linear both;
+          animation: wall-e-foldCubeAngle 2.4s infinite linear both;
     -webkit-transform-origin: 100% 100%;
       -ms-transform-origin: 100% 100%;
           transform-origin: 100% 100%;
 }
-.mugi-folding-cube .mugi-cube2 {
+.wall-e-folding-cube .wall-e-cube2 {
     -webkit-transform: scale(1.1) rotateZ(90deg);
           transform: scale(1.1) rotateZ(90deg);
 }
-.mugi-folding-cube .mugi-cube3 {
+.wall-e-folding-cube .wall-e-cube3 {
     -webkit-transform: scale(1.1) rotateZ(180deg);
           transform: scale(1.1) rotateZ(180deg);
 }
-.mugi-folding-cube .mugi-cube4 {
+.wall-e-folding-cube .wall-e-cube4 {
     -webkit-transform: scale(1.1) rotateZ(270deg);
           transform: scale(1.1) rotateZ(270deg);
 }
-.mugi-folding-cube .mugi-cube2:before {
+.wall-e-folding-cube .wall-e-cube2:before {
     -webkit-animation-delay: 0.3s;
           animation-delay: 0.3s;
 }
-.mugi-folding-cube .mugi-cube3:before {
+.wall-e-folding-cube .wall-e-cube3:before {
     -webkit-animation-delay: 0.6s;
           animation-delay: 0.6s; 
 }
-.mugi-folding-cube .mugi-cube4:before {
+.wall-e-folding-cube .wall-e-cube4:before {
     -webkit-animation-delay: 0.9s;
           animation-delay: 0.9s;
 }
-@-webkit-keyframes mugi-foldCubeAngle {
+@-webkit-keyframes wall-e-foldCubeAngle {
     0%, 10% {
         -webkit-transform: perspective(140px) rotateX(-180deg);
             transform: perspective(140px) rotateX(-180deg);
@@ -194,7 +194,7 @@ ul.styled {
     } 
 }
 
-@keyframes mugi-foldCubeAngle {
+@keyframes wall-e-foldCubeAngle {
     0%, 10% {
         -webkit-transform: perspective(140px) rotateX(-180deg);
             transform: perspective(140px) rotateX(-180deg);
