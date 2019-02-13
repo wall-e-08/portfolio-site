@@ -1,14 +1,10 @@
 $(window).on('load', function() {
     "use strict";
 
-    /*=========================================================================
-        Preloader
-    =========================================================================*/
-    $("#preloader").delay(350).fadeOut('slow');
+    //Preloader
+    $("#d-preloader").delay(5000).fadeOut();
 
-    /*=========================================================================
-     Isotope
-     =========================================================================*/
+    //Isotope
     $('.portfolio-filter').on( 'click', 'li', function() {
         var filterValue = $(this).attr('data-filter');
         $container.isotope({ filter: filterValue });
@@ -35,9 +31,7 @@ $(window).on('load', function() {
       });
     });
 
-    /*=========================================================================
-     Infinite Scroll
-     =========================================================================*/
+    //Infinite Scroll
     var curPage = 1;
     var pagesNum = $(".portfolio-pagination").find("li a:last").text();   // Number of pages
 
@@ -117,9 +111,7 @@ $(window).on('load', function() {
 $(document).on('ready', function() {
     "use strict";
 
-    /*=========================================================================
-                Slick Slider
-    =========================================================================*/
+    //Slick Slider
     $('.clients-wrapper').slick({
       dots: true,
       arrows: false,
@@ -157,9 +149,7 @@ $(document).on('ready', function() {
 $(function(){
     "use strict";
 
-    /*=========================================================================
-            Mobile Menu Toggle
-    =========================================================================*/
+    // Mobile Menu Toggle
     $('.menu-icon button').on( 'click', function() {
         $('header.desktop-header, main.content, header.mobile-header').toggleClass('open');
     });
@@ -172,9 +162,7 @@ $(function(){
         $('header.desktop-header, main.content, header.mobile-header').removeClass('open');
     });
 
-    /*=========================================================================
-     One Page Scroll with jQuery
-     =========================================================================*/
+    //One Page Scroll with jQuery
     $('.vertical-menu li a[href^="#"]:not([href="#"]), .mouse-wrapper').on('click', function(event) {
       var $anchor = $(this);
       $('html, body').stop().animate({
@@ -183,27 +171,19 @@ $(function(){
       event.preventDefault();
     });
 
-    /*=========================================================================
-     Add (nav-link) class to main menu.
-     =========================================================================*/
+    //Add (nav-link) class to main menu.
     $('.vertical-menu li a').addClass('nav-link');
 
-    /*=========================================================================
-     Bootstrap Scrollspy
-     =========================================================================*/
+    //Bootstrap Scrollspy
     $("body").scrollspy({ target: ".scrollspy"});
 
-    /*=========================================================================
-     Counterup JS for facts
-     =========================================================================*/
+    //Counterup JS for facts
     $('.count').counterUp({
       delay: 10,
       time: 2000
     });
 
-    /*=========================================================================
-     Progress bar animation with Waypoint JS
-     =========================================================================*/
+    //Progress bar animation with Waypoint JS
     if ($('.skill-item').length > 0) { 
       var waypoint = new Waypoint({
         element: document.getElementsByClassName('skill-item'),
@@ -220,9 +200,7 @@ $(function(){
       });
     }
 
-    /*=========================================================================
-     Spacer with Data Attribute
-     =========================================================================*/
+    //Spacer with Data Attribute
     var list = document.getElementsByClassName('spacer');
 
     for (var i = 0; i < list.length; i++) {
@@ -230,9 +208,7 @@ $(function(){
       list[i].style.height = "" + size + "px";
     }
 
-    /*=========================================================================
-            Main Menu
-    =========================================================================*/
+    //Main Menu
     $( ".submenu" ).before( '<i class="ion-md-add switch"></i>' );
 
     $(".vertical-menu li i.switch").on( 'click', function() {
@@ -241,9 +217,7 @@ $(function(){
         $submenu.parent().toggleClass("openmenu");
     });
 
-    /*=========================================================================
-            Scroll to Top
-    =========================================================================*/
+    //Scroll to Top
     $(window).scroll(function() {
         if ($(this).scrollTop() >= 350) {        // If page is scrolled more than 50px
             $('#return-to-top').fadeIn(200);    // Fade in the arrow

@@ -13,19 +13,50 @@
     <link rel="stylesheet" href="css/slick.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
 
+    <style>
+        #d-preload-dots:after {
+            content: ' .';
+            animation: dots 1s steps(5, end) infinite;
+        }
+
+        @keyframes dots {
+            0%, 20% {
+                color: rgba(0, 0, 0, 0);
+                text-shadow: .25em 0 0 rgba(0, 0, 0, 0), .5em 0 0 rgba(0, 0, 0, 0);
+            }
+            40% {
+                color: white;
+                text-shadow: .25em 0 0 rgba(0, 0, 0, 0), .5em 0 0 rgba(0, 0, 0, 0);
+            }
+            60% {
+                text-shadow: .25em 0 0 white, .5em 0 0 rgba(0, 0, 0, 0);
+            }
+            80%, 100% {
+                text-shadow: .25em 0 0 white, .5em 0 0 white;
+            }
+        }
+    </style>
+    
 </head>
 
 <body class="dark">
 
 <!-- Preloader -->
-<div id="preloader">
-    <div class="outer">
-        <div class="wall-e-folding-cube">
-            <div class="wall-e-cube1 wall-e-cube"></div>
-            <div class="wall-e-cube2 wall-e-cube"></div>
-            <div class="wall-e-cube4 wall-e-cube"></div>
-            <div class="wall-e-cube3 wall-e-cube"></div>
-        </div>
+<div id="d-preloader" style="
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 5000;
+    background: #000;">
+    <div class="text-center" style="
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);">
+        <object>
+            <embed src="images/loading-d.svg">
+        </object>
+        <div style="font-size: 25px;">Loading <span id="d-preload-dots"></span></div>
     </div>
 </div>
 
@@ -69,7 +100,6 @@
     <nav>
         <ul class="vertical-menu mt-4 scrollspy">
             <li class="active"><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#works">Works</a></li>
             <li><a href="#testimonials">Testimonials</a></li>
@@ -93,10 +123,8 @@
 
 </header>
 
-<!-- main layout -->
 <main class="content">
 
-    <!-- section home -->
     <section id="home" class="home d-flex align-items-center">
         <div class="container">
 
@@ -115,7 +143,7 @@
 
             <!-- scroll down mouse wheel -->
             <div class="scroll-down">
-                <a href="#services" class="mouse-wrapper">
+                <a href="#skills" class="mouse-wrapper">
 					<span class="mouse">
 						<span class="wheel"></span>
 					</span>
@@ -125,84 +153,6 @@
 
     </section>
 
-    <!-- section services -->
-    <section id="services">
-
-        <div class="container">
-
-            <!-- section title -->
-            <h2 class="section-title font-black text-uppercase">Services</h2>
-
-            <div class="spacer" data-height="100"></div>
-
-            <div class="row">
-
-                <div class="col-md-4">
-                    <!-- service box -->
-                    <div class="service-box">
-                        <span class="icon icon-globe-alt square"></span>
-                        <h4 class="mb-4 mt-4">Development</h4>
-                        <p class="mb-0">There are many variations of passages of Lorem Ipsum available</p>
-                    </div>
-                    <div class="spacer" data-height="50"></div>
-                </div>
-
-                <div class="col-md-4">
-                    <!-- service box -->
-                    <div class="service-box">
-                        <span class="icon icon-bulb square"></span>
-                        <h4 class="mb-4 mt-4">UI/UX Design</h4>
-                        <p class="mb-0">There are many variations of passages of Lorem Ipsum available</p>
-                    </div>
-                    <div class="spacer" data-height="50"></div>
-                </div>
-
-                <div class="col-md-4">
-                    <!-- service box -->
-                    <div class="service-box">
-                        <span class="icon icon-graph square"></span>
-                        <h4 class="mb-4 mt-4">SEO</h4>
-                        <p class="mb-0">There are many variations of passages of Lorem Ipsum available</p>
-                    </div>
-                    <div class="spacer" data-height="50"></div>
-                </div>
-
-                <div class="col-md-4">
-                    <!-- service box -->
-                    <div class="service-box">
-                        <span class="icon icon-direction square"></span>
-                        <h4 class="mb-4 mt-4">Advertising</h4>
-                        <p class="mb-0">There are many variations of passages of Lorem Ipsum available</p>
-                    </div>
-                    <div class="spacer d-md-none d-lg-none" data-height="50"></div>
-                </div>
-
-                <div class="col-md-4">
-                    <!-- service box -->
-                    <div class="service-box">
-                        <span class="icon icon-pencil square"></span>
-                        <h4 class="mb-4 mt-4">Copy Write</h4>
-                        <p class="mb-0">There are many variations of passages of Lorem Ipsum available</p>
-                    </div>
-                    <div class="spacer d-md-none d-lg-none" data-height="50"></div>
-                </div>
-
-                <div class="col-md-4">
-                    <!-- service box -->
-                    <div class="service-box">
-                        <span class="icon icon-earphones square"></span>
-                        <h4 class="mb-4 mt-4">Support</h4>
-                        <p class="mb-0">There are many variations of passages of Lorem Ipsum available</p>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- section skills -->
     <section id="skills">
 
         <div class="container">
@@ -279,7 +229,6 @@
 
     </section>
 
-    <!-- section experience -->
     <section id="experience">
 
         <div class="container">
@@ -378,7 +327,6 @@
 
     </section>
 
-    <!-- section works -->
     <section id="works">
 
         <div class="container">
@@ -523,7 +471,6 @@
 
     </section>
 
-    <!-- section facts -->
     <section id="facts">
 
         <div class="container">
@@ -580,20 +527,16 @@
 
     </section>
 
-    <!-- section testimonials -->
     <section id="testimonials">
 
         <div class="container">
 
-            <!-- section title -->
             <h2 class="section-title font-black text-uppercase">Testimonials</h2>
 
             <div class="spacer" data-height="80"></div>
 
-            <!-- testimonials wrapper -->
             <div class="testimonials-wrapper">
 
-                <!-- testimonial item -->
                 <div class="testimonial-item text-center mx-auto">
                     <span class="symbol">“</span>
                     <div class="thumb mb-4 mx-auto">
@@ -603,7 +546,6 @@
                     <h4 class="mt-4 mb-0">John Doe</h4>
                 </div>
 
-                <!-- testimonial item -->
                 <div class="testimonial-item text-center mx-auto">
                     <span class="symbol">“</span>
                     <div class="thumb mb-4 mx-auto">
@@ -613,7 +555,6 @@
                     <h4 class="mt-4 mb-0">John Doe</h4>
                 </div>
 
-                <!-- testimonial item -->
                 <div class="testimonial-item text-center mx-auto">
                     <span class="symbol">“</span>
                     <div class="thumb mb-4 mx-auto">
@@ -629,23 +570,20 @@
 
     </section>
 
-    <!-- section contact -->
     <section id="contact">
 
         <div class="container">
 
-            <!-- section title -->
             <h2 class="section-title font-black text-uppercase">Contact</h2>
 
             <div class="spacer" data-height="100"></div>
 
-            <!-- contact info -->
             <div class="row">
 
                 <div class="col-md-4">
                     <div class="text-center">
                         <span class="icon icon-phone simple"></span>
-                        <h4 class="mb-2 mt-2 number">Call us</h4>
+                        <h4 class="mb-2 mt-2 number">Call me</h4>
                         <p class="mb-0">+976 9886-4334</p>
                     </div>
                     <div class="spacer d-md-none d-lg-none" data-height="30"></div>
@@ -654,7 +592,7 @@
                 <div class="col-md-4">
                     <div class="text-center">
                         <span class="icon icon-envelope-open simple"></span>
-                        <h4 class="mb-2 mt-2 number">Email us</h4>
+                        <h4 class="mb-2 mt-2 number">Email me</h4>
                         <p class="mb-0">hello@domain.website</p>
                     </div>
                     <div class="spacer d-md-none d-lg-none" data-height="30"></div>
@@ -663,7 +601,7 @@
                 <div class="col-md-4">
                     <div class="text-center">
                         <span class="icon icon-location-pin simple"></span>
-                        <h4 class="mb-2 mt-2 number">Visit us</h4>
+                        <h4 class="mb-2 mt-2 number">Visit me</h4>
                         <p class="mb-0">West Palm Beach, 4669 Travis Street</p>
                     </div>
                 </div>
@@ -672,14 +610,12 @@
 
             <div class="spacer" data-height="70"></div>
 
-            <!-- Contact Form -->
-            <form id="contact-form" class="contact-form mt-6" method="post" action="form/contact.php">
+            <form id="contact-form" class="contact-form mt-6" method="post" action="#">
 
                 <div class="messages"></div>
 
                 <div class="row">
                     <div class="column col-md-4">
-                        <!-- Name input -->
                         <div class="form-group">
                             <input type="text" class="form-control" name="InputName" id="InputName" placeholder="Your name" required="required" data-error="Name is required.">
                             <div class="help-block with-errors"></div>
@@ -687,7 +623,6 @@
                     </div>
 
                     <div class="column col-md-4">
-                        <!-- Email input -->
                         <div class="form-group">
                             <input type="email" class="form-control" id="InputEmail" name="InputEmail" placeholder="Email address" required="required" data-error="Email is required.">
                             <div class="help-block with-errors"></div>
@@ -695,7 +630,6 @@
                     </div>
 
                     <div class="column col-md-4">
-                        <!-- Email input -->
                         <div class="form-group">
                             <input type="text" class="form-control" id="InputSubject" name="InputSubject" placeholder="Subject" required="required" data-error="Subject is required.">
                             <div class="help-block with-errors"></div>
@@ -703,29 +637,23 @@
                     </div>
 
                     <div class="column col-md-12">
-                        <!-- Message textarea -->
                         <div class="form-group">
                             <textarea name="InputMessage" id="InputMessage" class="form-control" rows="5" placeholder="Message" required="required" data-error="Message is required."></textarea>
                             <div class="help-block with-errors"></div>
                         </div>
                     </div>
                 </div>
-
                 <button type="submit" name="submit" id="submit" value="Submit" class="btn btn-default btn-full btn-animation">Submit Message</button><!-- Send Button -->
-
             </form>
-            <!-- Contact Form end -->
-
         </div>
 
     </section>
 
 </main>
 
-<!-- Go to top button -->
 <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
 
-<!-- SCRIPTS -->
+
 <script src="js/jquery-1.12.3.min.js"></script>
 <script src="js/jquery.easing.min.js"></script>
 <script src="js/jquery.waypoints.min.js"></script>
