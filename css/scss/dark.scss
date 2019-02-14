@@ -2,7 +2,7 @@ body.dark {
     background: $dark-theme-color;
     color: #888;
     header, .btn-default:before, #preloader {
-        background: $dark-theme-color;
+        background: $colordefault;
     }
     header, section, .fact-item, .price-item, .client-item, .form-control {
         border-color: #222;
