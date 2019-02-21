@@ -34,8 +34,15 @@ a {
     }
 }
 
+@each $weight in 200, 400, 600, 900 {
+    .fw-#{$weight} {
+        font-weight: $weight !important;
+    }
+}
+
+
 .font-black {
-    font-weight: 900;
+    @extend .fw-900;
 }
 
 ul.styled {

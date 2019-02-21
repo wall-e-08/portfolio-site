@@ -2,7 +2,7 @@ $(window).on('load', function() {
     "use strict";
 
     //Preloader
-    $("#d-preloader").delay(5000).fadeOut();
+    $("#d-preloader").delay(500).fadeOut();
 
     //Isotope
     $('.portfolio-filter').on( 'click', 'li', function() {

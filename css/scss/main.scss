@@ -25,13 +25,24 @@ section.home {
     min-height: 100vh;
     .cta {
         margin: auto;
-        max-width: 540px;
-        h1 {
-            font-size: 72px;
-            line-height: 0.9em;
+        //max-width: 540px;
+        .d-still-text {
+            margin-left: -250px;
         }
-        p {
-            font-size: 20px;
+        .d-heading-top {
+            font-size: 18px;
+        }
+        .d-main-bordered-heading {
+            font-size: 30px;
+            letter-spacing: 4px;
+            border: 1px solid;
+            line-height: 1.6;
+        }
+        .d-heading-btm {
+            font-size: 50px;
+            font-weight: 300;
+            word-spacing: 2px;
+            letter-spacing: 2px;
         }
     }
 }
